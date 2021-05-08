@@ -1,65 +1,126 @@
 <html>
 <style>
 {}
-#main{
-  background-color:black;
+body{
+  background-image:url("https://w.wallhaven.cc/full/3z/wallhaven-3zl5rd.jpg");
+  background-position:center center;
+  background-size: cover;
+  background-attachment:fixed;
+}
+#description{
+  color:white;
+  text-align:center;
 }
 #title{
+  font-family: monospace;
+  color:white;
   text-align:center;
-  color:#9B2335;
-}
-#img-div{
-  text-align:center;
-  color:#C0C0C0;
-}
-h2{
-  text-align:center;
-    color:white;
 }
 
-h3{
-  text-align:center;
-  color:white;
+#name-label{
+  position:relative;
+  right:230px;
 }
-h4{
-  text-align:center;
-  color:white;
+#email-label{
+  position:relative;
+  right:230px;
 }
-#points{
-  font-family:monospace;
-  color:white;
-  font-size:15px;
+#number-label{
+  position:relative;
+  right:230px;
 }
-#image{
-  text-align:center;
+#name{
+  width:500px;
+  height:40px;
+}
+#email{
+  width:500px;
+  height:40px;
+}
+#number{
+    width:500px;
+  height:40px;
+}
+#comments{
+   width:500px;
+  height:70px;
+}
+#survey-form{
   display:block;
-  max-height:100%;
-  max-width:100%;
+  position:relative;
+  bottom:250px;
+  text-align:center;
+  background-color:rgba(128, 0, 0, 0.2);
+  color:white;
+  margin:250px;
+  padding:50px;
+  border-radius:20px;
 }
-#tribute-link{
-  color:blue;
+#dropdown{
+  width:500px;
+  height:40px;
+  
+ }
+#companies{
+  width:500px;
+  height:40px;
 }
-</style>
+#name-label{
+  color:white;
+  
+}
+#text{
+  color:white;
+}
+#text2{
+  color:white;
+}
+#submit{
+  background-color:black;
+  color:white;
+}
+#submit:hover{
+  background-color:white;
+  color:black;
+}
 
-  <main id ="main">
-    <title>Tribute Page</title>
-    <h1 id="title">Venom Snake</h1>
-    <h2>The Man Who Sold the World</h2>
-    <div id="img-div">
-      <img id="image" src="https://w.wallhaven.cc/full/4l/wallhaven-4le2e2.jpg" alt="Photo of Venom Snake">
-      <p id="img-caption">Snake,the eye-patched guy in middle</p>
-      </div>
-    <div id="tribute-info">
-      <h3>Here's some info about his background</h3>
-      <ul>
-        <li id="points">In 1972, David and his twin brother Eli were born as a result of the secret government project "Les Enfants Terribles,"[8] designed to create the perfect soldier, using the genes of the "Greatest Warrior of the 20th Century" Big Boss. The twins were also to serve as an insurance policy for the Patriots, should Big Boss abandon their organization.</li>
-        <li id="points">Following his birth, Solid Snake was given the name David. He spent his early life being raised in the United States by a variety of foster parents.</li>
-        <li id="points">Later, David joined Big Boss's special forces unit FOXHOUND, during which time he received the codename "Solid Snake." While undergoing FOXHOUND's training regimen, he became an expert of high-altitude skydiving, linguistics, closed-circuit open-circuit combat diving, and free climbing.</li>
-        <li id="points">Snake was later scouted by the CIA and spent six months as an undercover agent, until he became dissatisfied with the organization and left. He then became a mercenary for hire, and after earning enough money, he went into semi-retirement in the Canadian wilderness.</li>
-        <li id="points"> December 1999, Snake was called upon by FOXHOUND’s new commander, Roy Campbell, for an operation into Central Asia. Apparently, a new highly militarized nation called Zanzibar Land had kidnapped Dr. Kio Marv, inventor of the oil refining microbe, OILIX</li>
-        </ul>
-      <h4>You can find some more information about Snake by <a id="tribute-link" target="_blank" href="https://metalgear.fandom.com/wiki/Solid_Snake#Background">clicking here.</a></h4>
-      </div>
-    </main>
+</style>
+  <body id="main">
+  <h1 id="title">'Your Favourite Game' Survey Form</h1>
+  <p id="description">Thank you for checking our form.</p>
+  <form id="survey-form">
+    <label id="name-label" for="name">Name</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your Name" required=""><br>
+    <label id="email-label" for="email">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your Email" required=""><br>
+    <label id="number-label" for="number">Age</label><br>
+    <input type="number" id="number" name="number" min="18" max="50" placeholder="Your Age"><br>
+    <p id ="text">Select the type of Game you like the most</p>
+    <label id="rp" for="rpg">
+      <input type="radio" id="rpg" value="rpg" name="Type" checked="" >RPG</label><br>
+      <label for="coop">
+        <input type="radio" id="coop" name="Type" value="coop">Multiplayer Coop</label><br>
+    <label for="shooting">
+      <input type="radio" id="shoot" value="shooting" name="Type">Online Shooting</label><br></div>
+    <label for="companies">Select your favourite company:</label><br>
+    <select name="companies" id="dropdown">
+      <option value="ea">Electronics Arts</option>
+      <option value="cdpr">C.D Projekt Red</option>
+      <option value="valve">Valve</option>
+      </select>
+    <p id="text2">Games you hate the most:</p>
+    <label for="fifa">
+     <input type="checkbox" id="fifa" value="fifa" name="hated">Fifa</label><br>
+      <label for="sims">
+        <input type="checkbox" id="sims" value="sims" name="hated">Sims</label><br>
+    <label for="assasin">
+      <input type="checkbox" id="assasin" value="assasin" name="hated">Assasin's Creed</label><br>
+    <label for="comments">Enter any additional comment:<br>
+      <textarea id="comments" placeholder="Your Comment"></textarea><br>
+    <label for="survey-form">
+      <input type="submit" id="submit" value="Submit">
+        
+      </label>
+    </form>
+  </body>
   </html>
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
